@@ -8,3 +8,4 @@ const dummyImageUrl =
 const String loginEndpoint = "/api/v1/sr/login";
 const String dashboardEndpoint = "/api/v1/sr/dashboard";
 const String profileEndpoint = "/api/v1/sr/profile-info";
+const String ordersEndpoint = "/api/v1/sr/orders";

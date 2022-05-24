@@ -6,10 +6,12 @@ class GetStorageProfile {
   storeProfileInfo(
       {required String name,
       required String email,
-      required String phoneNumber}) {
+      required String phoneNumber,
+      required var id}) {
     box.write('name', name);
     box.write('email', email);
     box.write('phoneNumber', phoneNumber);
+    box.write('id', id);
   }
 
   storeToken({required String token}) {
@@ -26,5 +28,14 @@ class GetStorageProfile {
 
   storePhoneNumber({required String phoneNumber}) {
     box.write('phoneNumber', phoneNumber);
+  }
+
+  storeAddress({required String address}) {
+    box.write('address', address);
+  }
+
+  String getToken() {
+    String temp = box.read('token');
+    return temp;
   }
 }

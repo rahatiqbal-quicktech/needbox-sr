@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:needbox_sr/features/product_details/product_details_screen.dart';
 import 'package:needbox_sr/shared/animations/loading_animation.dart';
 import 'package:needbox_sr/shared/controllers/all_controlelrs.dart';
 import 'package:needbox_sr/utils/colors.dart';
@@ -41,7 +42,9 @@ class ProductsScreen extends StatelessWidget with AllControllers {
                       //     wholesaleProductC.wholeSaleProductList[i];
 
                       return CustomGridCardWidget(
-                        onTap: null,
+                        onTap: () {
+                          Get.to(() => const ProductDetailsScreen());
+                        },
                         imageUrl:
                             "$imageBaseUrl${products![i].proimage!.image}",
                         productname: "${products[i].productname}",

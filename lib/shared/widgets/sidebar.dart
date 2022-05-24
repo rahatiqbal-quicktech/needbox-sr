@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:needbox_sr/features/orders/orders_screen.dart';
 import 'package:needbox_sr/features/profile/profile_screen.dart';
+import 'package:needbox_sr/features/profile_edit/profile_edit_screen.dart';
 import 'package:needbox_sr/shared/widgets/k_text_widget.dart';
 import 'package:needbox_sr/utils/colors.dart';
 import 'package:needbox_sr/utils/config.dart';
@@ -62,29 +64,24 @@ class Sidebar extends StatelessWidget {
 
           customButton(
             onTap: () {
-              Get.to(() => const ProfileScreen());
+              Get.to(() => ProfileScreen());
             },
             icons: Ionicons.accessibility,
             titleText: 'My Profile',
           ),
 
           customButton(
-            // onTap: (() => Get.to(
-            //       EditProfilePage(
-            //         isBackEnabled: true,
-            //         sellerInfo: item,
-            //       ),
-            //     )
-            //     ),
+            onTap: (() => Get.to(const EditProfileScreen())),
             icons: Ionicons.pencil,
             titleText: 'Edit Profile',
           ),
 
           customButton(
-            icons: Ionicons.receipt_outline,
-            titleText: 'Orders',
-            onTap: () => null,
-          ),
+              icons: Ionicons.receipt_outline,
+              titleText: 'Orders',
+              onTap: () {
+                Get.to(() => const OrdersScreen());
+              }),
 
           // customButton(
           //   onTap: (() => Get.to(ProfilePage(isBackEnabled: true))),
@@ -95,11 +92,11 @@ class Sidebar extends StatelessWidget {
           // CustomDividerWidget(),
           const Divider(),
           sizeH20,
-          customButton(
-            onTap: () => Null,
-            icons: Ionicons.lock_open_outline,
-            titleText: 'Change Password',
-          ),
+          // customButton(
+          //   onTap: () => Null,
+          //   icons: Ionicons.lock_open_outline,
+          //   titleText: 'Change Password',
+          // ),
           customButton(
             onTap: () => null,
             icons: Icons.logout_outlined,

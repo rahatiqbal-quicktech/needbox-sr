@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart' as get_prefix;
 import 'package:get_storage/get_storage.dart';
-import 'package:needbox_sr/features/profile/profile_details/service/profile_details_service.dart';
+import 'package:needbox_sr/features/profile/service/profile_details_service.dart';
 import 'package:needbox_sr/shared/feature/get_storage_profile.dart';
 import 'package:needbox_sr/utils/service_config.dart';
 
