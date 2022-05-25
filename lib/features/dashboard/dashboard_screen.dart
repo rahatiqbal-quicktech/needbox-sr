@@ -110,6 +110,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> with AllControllers {
                           size: size),
                     ],
                   ),
+                  whitespace(context, 10, 0),
                 ],
               )
             : const Center(child: CircularProgressIndicator());

@@ -6,6 +6,7 @@ import 'package:get/get.dart' as get_prefix;
 import 'package:get_storage/get_storage.dart';
 import 'package:needbox_sr/features/profile/service/profile_details_service.dart';
 import 'package:needbox_sr/shared/feature/get_storage_profile.dart';
+import 'package:needbox_sr/shared/widgets/loading_dialogue.dart';
 import 'package:needbox_sr/utils/service_config.dart';
 
 class LoginService {
@@ -20,13 +21,16 @@ class LoginService {
 
       if (response.statusCode == 200) {
         GetStorageProfile().storeToken(token: response.data['token']);
+        LoadingDialog().dismiss();
         ProfileDetailService()
             .getProfileDetails(token: "${response.data['token']}");
         // get_prefix.Get.to(() => const CustomBottomAppBar());
       } else {
+        LoadingDialog().dismiss();
         Fluttertoast.showToast(msg: "Invalid Credentials");
       }
     } on Exception catch (e) {
+      LoadingDialog().dismiss();
       print(e);
       Fluttertoast.showToast(msg: "Invalid Credentials");
     }

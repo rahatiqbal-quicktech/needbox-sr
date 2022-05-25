@@ -3,7 +3,7 @@ import 'package:needbox_sr/utils/colors.dart';
 
 class AppTheme {
   static final appTheme = ThemeData(
-    scaffoldBackgroundColor: grey.shade100,
+    scaffoldBackgroundColor: white,
     appBarTheme: const AppBarTheme(
       iconTheme: IconThemeData(
         color: Colors.white,

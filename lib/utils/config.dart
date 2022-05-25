@@ -28,6 +28,11 @@ const sizeW15 = SizedBox(width: 15);
 const sizeW20 = SizedBox(width: 20);
 const sizeW30 = SizedBox(width: 30);
 
+//for padding
+
+const paddingH10V10 = EdgeInsets.symmetric(horizontal: 10, vertical: 10);
+const paddingH10V20 = EdgeInsets.symmetric(horizontal: 10, vertical: 20);
+
 //border radius
 
 final borderRadiusC5 = BorderRadius.circular(5);

@@ -23,7 +23,9 @@ class ProfileDetailService {
             phoneNumber: "${temp.profile?.phone}",
             id: temp.profile?.id);
         GetStorageProfile().storeAddress(address: "${temp.profile?.address}");
-        Fluttertoast.showToast(msg: "Successfully Logged In");
+        GetStorageProfile().storeProfileImage(
+            profileImage: "$imageBaseUrl${temp.profile?.image}");
+        Fluttertoast.showToast(msg: "Success");
         Get.to(() => const CustomBottomAppBar());
       } else {
         Get.snackbar('Error', "Couldn't get user details");

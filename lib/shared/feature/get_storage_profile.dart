@@ -34,8 +34,20 @@ class GetStorageProfile {
     box.write('address', address);
   }
 
+  storeProfileImage({required String profileImage}) {
+    box.write('profileImage', profileImage);
+  }
+
   String getToken() {
     String temp = box.read('token');
     return temp;
+  }
+
+  deleteAllGetStorageData() {
+    box.remove('name');
+    box.remove('email');
+    box.remove('phoneNumber');
+    box.remove('id');
+    box.remove('token');
   }
 }

@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:needbox_sr/features/login/service/login_service.dart';
 import 'package:needbox_sr/shared/widgets/custom_bottom_appbar.dart';
 import 'package:needbox_sr/shared/widgets/custom_formfield_widget.dart';
+import 'package:needbox_sr/shared/widgets/loading_dialogue.dart';
 import 'package:needbox_sr/shared/widgets/whitespace.dart';
 import 'package:needbox_sr/utils/config.dart';
 
@@ -63,6 +64,7 @@ class LoginScreen extends StatelessWidget {
                           } else {
                             // loginC.loginUser();
                             // Get.to(() => CustomBottomAppBar());
+                            LoadingDialog().show(context);
                             LoginService().login(
                                 email: sellerPhone.text,
                                 password: sellerpassword.text);

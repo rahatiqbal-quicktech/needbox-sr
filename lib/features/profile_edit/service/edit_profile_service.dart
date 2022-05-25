@@ -4,11 +4,13 @@ import 'package:dio/dio.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart' as get_prefix;
 import 'package:needbox_sr/features/profile/service/profile_details_service.dart';
+import 'package:needbox_sr/shared/controllers/all_controlelrs.dart';
 import 'package:needbox_sr/shared/feature/get_storage_profile.dart';
 import 'package:needbox_sr/utils/service_config.dart';
 
-class EditProfileService {
+class EditProfileService with AllControllers {
   var dio = Dio();
+
   updateProfile({required String name, required String address}) async {
     String token = GetStorageProfile().getToken();
     Map<String, dynamic> data = {'name': name, 'address': address};
@@ -25,6 +27,7 @@ class EditProfileService {
       if (response.statusCode == 200) {
         Fluttertoast.showToast(msg: "Profile Updated");
         ProfileDetailService().getProfileDetails(token: token);
+        profileScreenController.getProfileDetails();
         get_prefix.Get.back();
       } else {
         Fluttertoast.showToast(

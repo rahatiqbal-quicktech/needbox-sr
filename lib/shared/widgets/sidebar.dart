@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:needbox_sr/features/cart/cart_screen.dart';
+import 'package:needbox_sr/features/login/login_screen.dart';
 import 'package:needbox_sr/features/orders/orders_screen.dart';
 import 'package:needbox_sr/features/profile/profile_screen.dart';
 import 'package:needbox_sr/features/profile_edit/profile_edit_screen.dart';
+import 'package:needbox_sr/shared/feature/get_storage_profile.dart';
 import 'package:needbox_sr/shared/widgets/k_text_widget.dart';
 import 'package:needbox_sr/utils/colors.dart';
 import 'package:needbox_sr/utils/config.dart';
@@ -28,8 +31,9 @@ class Sidebar extends StatelessWidget {
               children: [
                 CircleAvatar(
                   backgroundColor: orange,
-                  backgroundImage: const NetworkImage(
-                      "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-portrait.jpg"),
+                  backgroundImage: NetworkImage(box.read('profileImage')
+                      // "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-portrait.jpg"
+                      ),
                   radius: 25,
                 ),
                 sizeW20,
@@ -60,6 +64,11 @@ class Sidebar extends StatelessWidget {
             onTap: () => Get.offAll(const CustomBottomAppBar()),
             icons: Ionicons.grid_outline,
             titleText: 'Dashboard',
+          ),
+          customButton(
+            onTap: () => Get.to(() => CartScreen()),
+            icons: Ionicons.cart,
+            titleText: 'Cart',
           ),
 
           customButton(
@@ -98,7 +107,10 @@ class Sidebar extends StatelessWidget {
           //   titleText: 'Change Password',
           // ),
           customButton(
-            onTap: () => null,
+            onTap: () {
+              GetStorageProfile().deleteAllGetStorageData();
+              Get.offAll(() => LoginScreen());
+            },
             icons: Icons.logout_outlined,
             titleText: 'Logout',
           ),

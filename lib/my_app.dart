@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: AppTheme.appTheme,
-      home: const CartScreen(),
+      home: LoginScreen(),
     );
   }
 }
