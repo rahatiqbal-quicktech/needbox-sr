@@ -3,7 +3,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:needbox_sr/shared/animations/loading_animation.dart';
-import 'package:needbox_sr/utils/service_config.dart';
 
 class CachedNetworkImageWidget extends StatelessWidget {
   String imageUrl;

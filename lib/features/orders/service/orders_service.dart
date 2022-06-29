@@ -24,5 +24,6 @@ class OrdersService {
     } on Exception catch (e) {
       print(e);
     }
+    return null;
   }
 }

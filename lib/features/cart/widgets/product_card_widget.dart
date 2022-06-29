@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:needbox_sr/features/product_details/product_details_screen.dart';
-import 'package:needbox_sr/shared/controllers/all_controlelrs.dart';
 import 'package:needbox_sr/shared/controllers/cart/cart_controller.dart';
 import 'package:needbox_sr/shared/modles/cart/cart_models.dart';
 import 'package:needbox_sr/shared/widgets/cached_networkimage_widget.dart';

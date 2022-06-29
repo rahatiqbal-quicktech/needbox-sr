@@ -210,7 +210,7 @@ class _OrderCheckOutPageState extends State<OrderCheckOutPage>
                         ),
                         sizeW10,
                         KText(
-                          text: 'Cash On De livery',
+                          text: 'Cash On Delivery',
                           fontSize: 14,
                           fontWeight: FontWeight.w600,
                         ),

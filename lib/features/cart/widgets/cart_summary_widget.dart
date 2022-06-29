@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:needbox_sr/features/checkout/checkout_screen.dart';
 import 'package:needbox_sr/features/profile/models/profile_details_model.dart';
-import 'package:needbox_sr/features/profile/service/profile_details_service.dart';
 import 'package:needbox_sr/features/profile/service/profile_screen_service.dart';
 import 'package:needbox_sr/shared/animations/loading_animation.dart';
 import 'package:needbox_sr/shared/controllers/cart/cart_controller.dart';

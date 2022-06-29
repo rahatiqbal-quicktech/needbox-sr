@@ -24,5 +24,6 @@ class ProductDetailsService {
     } catch (e) {
       print(e);
     }
+    return null;
   }
 }

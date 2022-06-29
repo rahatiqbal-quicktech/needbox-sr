@@ -75,31 +75,11 @@ class _DashBoardScreenState extends State<DashBoardScreen> with AllControllers {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       dashboardWidget(
-                          icon: Icons.update,
-                          color1: "##5f2c82",
-                          color2: "##49a09d",
-                          title: "Rescheduled",
-                          content: "Unavailable",
-                          size: size),
-                      dashboardWidget(
                           icon: Icons.send_time_extension,
                           color1: "##283048",
                           color2: "##859398",
                           title: "Delivered",
                           content: "${data.deliverd}",
-                          size: size),
-                    ],
-                  ),
-                  whitespace(context, 2, 0),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      dashboardWidget(
-                          icon: Icons.disabled_by_default,
-                          color1: "##134E5E",
-                          color2: "##71B280",
-                          title: "Cancelled",
-                          content: "${data.cancelled}",
                           size: size),
                       dashboardWidget(
                           icon: Icons.keyboard_return,
@@ -108,6 +88,33 @@ class _DashBoardScreenState extends State<DashBoardScreen> with AllControllers {
                           title: "Returned",
                           content: "${data.returned}",
                           size: size),
+                    ],
+                  ),
+                  whitespace(context, 2, 0),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      // dashboardWidget(
+                      //     icon: Icons.update,
+                      //     color1: "##5f2c82",
+                      //     color2: "##49a09d",
+                      //     title: "Rescheduled",
+                      //     content: "Unavailable",
+                      //     size: size),
+
+                      dashboardWidget(
+                          icon: Icons.disabled_by_default,
+                          color1: "##134E5E",
+                          color2: "##71B280",
+                          title: "Cancelled",
+                          content: "${data.cancelled}",
+                          size: size),
+
+                      // This sizedbox is for empty space to match UI layout,
+                      SizedBox(
+                        height: size.height * 20,
+                        width: size.width * 41,
+                      ),
                     ],
                   ),
                   whitespace(context, 10, 0),

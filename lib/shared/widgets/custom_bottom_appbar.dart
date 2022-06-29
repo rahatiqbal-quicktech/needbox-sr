@@ -79,7 +79,8 @@ class _CustomBottomAppBarState extends State<CustomBottomAppBar> {
         resizeToAvoidBottomInset: false,
         drawer: Sidebar(),
         appBar: AppBar(
-          backgroundColor: Colors.grey.shade200,
+          backgroundColor: Colors.grey.shade100,
+          iconTheme: IconThemeData(color: orange),
           elevation: 0.1,
           title: KText(
             text: _currentTabName,
@@ -110,7 +111,7 @@ class _CustomBottomAppBarState extends State<CustomBottomAppBar> {
                     _currentTabName = 'Products';
                   });
                 },
-                iconData: Icons.add,
+                iconData: Icons.add_box,
                 isTitleHide: true,
                 title: '',
                 color: white,

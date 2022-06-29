@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:get/get.dart';
 import 'package:needbox_sr/features/login/service/login_service.dart';
-import 'package:needbox_sr/shared/widgets/custom_bottom_appbar.dart';
 import 'package:needbox_sr/shared/widgets/custom_formfield_widget.dart';
 import 'package:needbox_sr/shared/widgets/loading_dialogue.dart';
 import 'package:needbox_sr/shared/widgets/whitespace.dart';
